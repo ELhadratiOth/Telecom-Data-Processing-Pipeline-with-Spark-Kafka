@@ -298,19 +298,3 @@ AWS_DEFAULT_REGION=eu-west-3
 - **Rate Plan Validation**: Service eligibility checks
 - **Customer Status**: Active customer verification
 
-
-## 📊 Quick Start Example
-
-```bash
-# 1. Start the pipeline
-./start_pipeline.sh
-
-# 2. Generate sample data
-cd 1_Data-Generation_Phase && python3 producer.py
-
-# 3. Process data through all phases
-./run_all_phases.sh
-
-# 4. Check results
-ls -la reports/
-```
