@@ -1,0 +1,11 @@
+mediation:
+  input_kafka:
+    topic: telecom_usage_records
+    bootstrap_servers: localhost:9092
+  output_kafka:
+    valid_topic: normalized_records
+    dead_letter_topic: dead_letter_topic
+    bootstrap_servers: localhost:9092
+  spark:
+    app_name: TelecomMediation
+    master: local[*]

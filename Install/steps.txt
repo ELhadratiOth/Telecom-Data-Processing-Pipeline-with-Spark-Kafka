@@ -1,0 +1,43 @@
+public-IP = localhost 
+
+
+# to download Kafka 3.8.0
+wget https://downloads.apache.org/kafka/3.8.0/kafka_2.12-3.8.0.tgz
+
+# to extract the downloaded Kafka 
+tar -xvf kafka_2.12-3.8.0.tgz
+
+# to change directory to the extracted Kafka folder
+cd kafka_2.12-3.3.1
+
+
+# Start ZooKeeper server
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start Kafka server
+bin/kafka-server-start.sh config/server.properties
+
+# Create a Kafka topic named topic-name
+bin/kafka-topics.sh --create --topic topic-name --bootstrap-server  localhost:9092 --replication-factor 1 --partitions 1
+
+
+
+# Start Kafka producer for the topic topic-name
+bin/kafka-console-producer.sh --topic topic-name --bootstrap-server localhost:9092
+
+
+
+# Start Kafka consumer for the topic topic-name
+bin/kafka-console-consumer.sh --topic topic-name --bootstrap-server localhost:9092
+
+
+
+#to list the  topics
+bin/kafka-topics.sh --list  --bootstrap-server localhost:9092 
+#delete a topic
+bin/kafka-topics.sh --delete --topic topic-name --bootstrap-server localhost:9092
+
+
+
+# if the  port  is not  empty for  the kafka server
+sudo lsof -i :9092

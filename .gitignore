@@ -1,0 +1,6 @@
+/venv
+/2_Mediation_Phase/output
+/3_Rating_Engine_Phase/output
+/2_Mediation_Phase/output
+/kafka_2.12-3.8.0
+.env

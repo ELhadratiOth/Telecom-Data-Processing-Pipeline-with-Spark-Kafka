@@ -1,0 +1,9 @@
+=====> copie-paste in server.properties in kafka config
+
+
+# java.net.InetAddress.getCanonicalHostName(), with PLAINTEXT listener name, and port 9092.
+#   FORMAT:
+     listeners = listener_name://localhost:port
+#   EXAMPLE:
+#     listeners = PLAINTEXT://your.host.name:9092
+listeners=PLAINTEXT://localhost:9092

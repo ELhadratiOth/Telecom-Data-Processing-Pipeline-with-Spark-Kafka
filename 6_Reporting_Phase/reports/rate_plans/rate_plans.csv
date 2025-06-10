@@ -1,0 +1,7 @@
+rate_plan_id,plan_name,service_type,unit_price,free_units,tiered_threshold_mb,tiered_price_mb
+1,Standard Plan,voice,0.01,2,,
+2,Standard Plan,sms,0.05,5,,
+3,Standard Plan,data,0.05,0,10.0,0.1
+4,Premium Plan,voice,0.08,4,,
+5,Premium Plan,sms,0.05,6,,
+6,Premium Plan,data,0.04,0,20.0,0.08

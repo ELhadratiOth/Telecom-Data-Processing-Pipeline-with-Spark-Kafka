@@ -1,0 +1,48 @@
+billing:
+  spark:
+    app_name: 'TelecomBilling'
+    master: 'local[*]'
+
+  taxes:
+    vat_rate: 0.20 # tva
+    regulatory_fee: 1.5 # 1.5 for non-student customer 
+
+  seasonal_discounts:
+    ramadan_month: 3 # March (Ramadan 2025)
+    ramadan_discount: 0.10
+
+  usage_thresholds:
+    voice:
+      threshold_minutes: 300 # 300+ minutes for discount
+      discount_rate: 0.10 
+    data:
+      threshold_mb: 2000 # 2000+ MB for discount
+      discount_rate: 0.08 
+    total_spending:
+      threshold_amount: 100.0 # 100+ MAD for discount
+      discount_rate: 0.05 
+
+  discounts:
+    student_discount_rate: 0.15 
+    loyalty_discount_per_year: 0.02 
+    max_loyalty_discount: 0.10
+    urban_discount_rate: 0.05
+
+  input_postgres:
+    url: 'jdbc:postgresql://localhost:5432/telecom_db'
+    table: 'rated_records'
+    user: 'othman'
+    password: 'othman'
+    driver: 'org.postgresql.Driver'
+  output_postgres:
+    url: 'jdbc:postgresql://localhost:5432/telecom_db'
+    table: 'invoices'
+    user: 'othman'
+    password: 'othman'
+    driver: 'org.postgresql.Driver'
+  customers_postgres:
+    url: 'jdbc:postgresql://localhost:5432/telecom_db'
+    table: 'customers'
+    user: 'othman'
+    password: 'othman'
+    driver: 'org.postgresql.Driver'

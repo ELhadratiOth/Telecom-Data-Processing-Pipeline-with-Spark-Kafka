@@ -1,0 +1,21 @@
+rating:
+  spark:
+    app_name: 'TelecomRating'
+    master: 'local[*]'
+
+  input_kafka:
+    bootstrap_servers: 'localhost:9092'
+    topic: 'normalized_records'
+
+  input_postgres:
+    url: 'jdbc:postgresql://localhost:5432/telecom_db'
+    table: 'normalized_records'
+    user: 'othman'
+    password: 'othman'
+    driver: 'org.postgresql.Driver'
+  output_rated_postgres:
+    url: 'jdbc:postgresql://localhost:5432/telecom_db'
+    table: 'rated_records'
+    user: 'othman'
+    password: 'othman'
+    driver: 'org.postgresql.Driver'

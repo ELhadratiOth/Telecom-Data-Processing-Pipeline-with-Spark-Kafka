@@ -1,0 +1,9 @@
+kafka-python
+pandas 
+pyyaml
+pyspark
+psycopg2-binary
+jinja2
+weasyprint
+python-dotenv
+boto3

@@ -1,0 +1,4 @@
+service_type,total_revenue,total_invoices,avg_revenue_per_customer
+voice,19344.688,593,32.621735
+sms,0.0,593,0.0
+data,133434.39,593,225.01582

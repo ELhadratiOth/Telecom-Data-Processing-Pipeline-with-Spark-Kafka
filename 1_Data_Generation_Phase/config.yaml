@@ -1,0 +1,88 @@
+data_generation:
+  records_per_hour: 10000
+  error_ratio: 0.05 # 5% records will have errors
+  roaming_ratio: 0.1 # 10% records will be roaming
+  customer_generation_probability: 0.98 # are real  customers
+
+  # Error generation probabilities when error_mode=True
+  error_probabilities:
+    fake_phone_number: 0.3 # 30% chance of fake phone number in error mode
+    error_callee_receiver: 0.5 # 50% chance of error callee/receiver in error mode
+    negative_duration: 0.2 # 20% chance of negative duration in error mode
+    negative_data_volume: 0.2 # 20% chance of negative data volume in error mode
+    missing_field: 0.3 # 30% chance of missing field in error mode
+    unrecognized_service: 0.1 # 10% chance of unrecognized service in error mode
+    wrong_rate_plan: 0.2 # 20% chance of wrong rate plan in error mode
+
+  # International call probabilities
+  international_call_ratio: 0.1 # 10% chance of international call
+  international_sms_ratio: 0.05 # 5% chance of international SMS
+
+  # Phone number generation in error mode
+  valid_customer_in_error_mode: 0.9  
+
+  service_distribution:
+    voice: 0.6
+    sms: 0.1
+    data: 0.3
+  technologies:
+    - 2G
+    - 3G
+    - 4G
+    - 5G
+  cell_ids:
+    - AL HOCEIMA
+    - RABAT
+    - CASABLANCA
+    - MARRAKECH
+    - FES
+    - TANGIER
+    - AGADIR
+    - MEKNES
+    - OUJDA
+    - TETOUAN
+    - KENITRA
+    - SAFI
+    - ESSAOUIRA
+    - BENI MELLAL
+    - EL JADIDA
+  international_cell_ids:
+    - PARIS
+    - TOULOUSE
+    - NEW YORK
+
+customer_generation:
+  default_count: 1000
+  batch_size: 1000
+  rate_plan_distribution:
+    1: 0.25 # Standard Voice
+    2: 0.25 # Standard SMS 
+    3: 0.30 # Standard Data 
+    4: 0.07 # Premium Voice 
+    5: 0.06 # Premium SMS 
+    6: 0.07 # Premium Data 
+  subscription_distribution:
+    postpaid: 1
+  status_distribution:
+    active: 0.7
+    suspended: 0.3
+  region_distribution:
+    urban: 0.65
+    rural: 0.35
+  student_ratio: 0.15
+  activation_date_range_years: 5 # max fidelity
+database:
+  host: 'localhost'
+  database: 'telecom_db'
+  user: 'othman'
+  password: 'othman'
+
+output:
+  format: kafka # Options: json, csv, kafka
+  # batch_output_path: telecom_records
+  kafka:
+    topic: telecom_usage_records
+    bootstrap_servers:
+      - localhost:9092
+  generation:
+    sleep: 0.1 #seconds

@@ -1,0 +1,9 @@
+to check the  status  :
+sudo systemctl status postgresql
+
+
+to activate it:
+sudo systemctl start postgresql
+
+to  connect : 
+psql -h localhost -p 5432 -U othman -d telecom_db

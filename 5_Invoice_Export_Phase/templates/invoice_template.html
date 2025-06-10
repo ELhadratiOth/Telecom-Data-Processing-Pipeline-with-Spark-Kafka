@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Telecom Invoice</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .company-logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+      .invoice-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+      .customer-info,
+      .invoice-details {
+        width: 45%;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .table th,
+      .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      .table th {
+        background-color: #f2f2f2;
+      }
+      .total-section {
+        margin-top: 20px;
+        text-align: right;
+      }
+      .total-row {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="company-logo">TELECOM MOROCCO</div>
+      <p>Your Trusted Telecommunications Partner</p>
+    </div>
+
+    <div class="invoice-info">
+      <div class="customer-info">
+        <h3>Bill To:</h3>
+        <p><strong>{{ customer_name }}</strong></p>
+        <p>MSISDN: {{ msisdn }}</p>
+        <p>Region: {{ region|title }}</p>
+        <p>Student: {{ 'Yes' if student else 'No' }}</p>
+      </div>
+
+      <div class="invoice-details">
+        <h3>Invoice Details:</h3>
+        <p><strong>Invoice ID:</strong> {{ invoice_id }}</p>
+        <p>
+          <strong>Invoice Date:</strong> {{ invoice_date.strftime('%Y-%m-%d') }}
+        </p>
+        <p>
+          <strong>Billing Period:</strong> {{
+          billing_period_start.strftime('%Y-%m-%d') }} to {{
+          billing_period_end.strftime('%Y-%m-%d') }}
+        </p>
+        <p><strong>Status:</strong> {{ status|title }}</p>
+      </div>
+    </div>
+
+    <h3>Usage Summary</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Service Type</th>
+          <th>Usage</th>
+          <th>Free Allowance</th>
+          <th>Billable Usage</th>
+          <th>Cost (MAD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Voice Calls</td>
+          <td>{{ "%.2f"|format(voice_usage) }} minutes</td>
+          <td>{{ voice_free_minutes }} minutes</td>
+          <td>{{ "%.2f"|format(voice_billable_minutes) }} minutes</td>
+          <td>{{ "%.2f"|format(voice_cost) }}</td>
+        </tr>
+        <tr>
+          <td>SMS Messages</td>
+          <td>{{ sms_usage }} messages</td>
+          <td>{{ sms_free_units }} messages</td>
+          <td>{{ sms_billable_count }} messages</td>
+          <td>{{ "%.2f"|format(sms_cost) }}</td>
+        </tr>
+        <tr>
+          <td>Data Usage</td>
+          <td>{{ "%.2f"|format(data_usage) }} MB</td>
+          <td>0 MB</td>
+          <td>{{ "%.2f"|format(data_usage) }} MB</td>
+          <td>{{ "%.2f"|format(data_cost) }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Discount Summary</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Discount Type</th>
+          <th>Amount (MAD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Usage Threshold Discounts</td>
+          <td>-{{ "%.2f"|format(usage_discounts) }}</td>
+        </tr>
+        <tr>
+          <td>Ramadan Seasonal Discount</td>
+          <td>-{{ "%.2f"|format(ramadan_discount) }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total-section">
+      <table class="table" style="width: 300px; margin-left: auto">
+        <tr>
+          <td><strong>Subtotal:</strong></td>
+          <td><strong>{{ "%.2f"|format(subtotal) }} MAD</strong></td>
+        </tr>
+        <tr>
+          <td>Total Discounts:</td>
+          <td>-{{ "%.2f"|format(total_discounts) }} MAD</td>
+        </tr>
+        <tr>
+          <td>VAT (20%):</td>
+          <td>{{ "%.2f"|format(vat_amount) }} MAD</td>
+        </tr>
+        <tr>
+          <td>Regulatory Fee:</td>
+          <td>{{ "%.2f"|format(regulatory_fee) }} MAD</td>
+        </tr>
+        <tr class="total-row">
+          <td>TOTAL DUE:</td>
+          <td>{{ "%.2f"|format(total_cost) }} MAD</td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+reporting:
+  spark:
+    app_name: 'TelecomReporting'
+    master: 'local[*]'
+
+  database:
+    url: 'jdbc:postgresql://localhost:5432/telecom_db'
+    user: 'othman'
+    password: 'othman'
+    driver: 'org.postgresql.Driver'
+
+  tables:
+    invoices:
+      table_name: 'invoices'
+      output_file: 'invoices_report.csv'
+    customers:
+      table_name: 'customers'
+      output_file: 'customers_report.csv'
+    rate_plans:
+      table_name: 'rate_plans'
+      output_file: 'rate_plans_report.csv'
+    rated_records:
+      table_name: 'rated_records'
+      output_file: 'rated_records_report.csv'
+    dead_records:
+      table_name: 'combined_dead_records'
+      output_file: 'dead_records_report.csv'
+
+  output:
+    base_path: './reports/'
+    timestamp_suffix: true
+    include_headers: true
+    delimiter: ','
+    date_format: 'yyyy-MM-dd_HH-mm-ss'
+
+  s3:
+    bucket_name: 'telecom-reports-bucket'
+    region: 'eu-west-3'
+    prefix: 'telecom-reports'
+    auto_create_bucket: true
+    verify_uploads: true

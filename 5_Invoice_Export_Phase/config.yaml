@@ -1,0 +1,29 @@
+invoice_export:
+  spark:
+    app_name: 'TelecomInvoiceExport'
+    master: 'local[*]'
+
+  target_customer:
+    customer_name: 'Aziz Kettani 19575' 
+
+  billing:
+    regulatory_fee: 1.5
+    ramadan_month: 3 
+    ramadan_discount_rate: 0.10 
+
+  email:
+    enabled: true
+    recipient: 'othmandone@gmail.com' 
+    subject_template: 'Your Monthly Telecom Invoice - {invoice_date}'
+    body_template: 'Please find your monthly invoice attached. Thank you for using our services.'
+
+  database:
+    url: 'jdbc:postgresql://localhost:5432/telecom_db'
+    invoices_table: 'invoices' 
+    user: 'othman'
+    password: 'othman'
+    driver: 'org.postgresql.Driver'
+
+  output:
+    pdf_path: './output/invoices/'
+    temp_html_path: './temp/'
