@@ -2,6 +2,19 @@
 
 A comprehensive real-time telecom data processing pipeline built with Apache Spark, Kafka, and PostgreSQL. This system handles telecom usage records (voice, SMS, data) from generation through billing and reporting.
 
+## Architecture Overview
+![Architecture](Imgs/architecture.png)
+
+The pipeline consists of six main phases:
+1. **Data Generation**: Simulates telecom usage records and streams them to Kafka.
+2. **Data Mediation**: Consumes records, validates, and normalizes them.
+3. **Rating Engine**: Applies multi-tier pricing and calculates costs based on usage.
+4. **Billing Engine**: Generates customer invoices based on rated records.
+5. **Invoice Export**: Creates PDF invoices and sends them via email.
+6. **Reporting**: Generates comprehensive reports and uploads them to S3.
+7. **Dashboard Analytics**: Provides real-time insights into usage and revenue.
+
+
 ## 🚀 Features
 
 ### ✅ **Real-time Data Processing**
@@ -40,6 +53,9 @@ A comprehensive real-time telecom data processing pipeline built with Apache Spa
 ## 📊 Dashboard Analytics
 
 The system provides real-time analytics dashboard with:
+
+![Dashboard](Imgs/dashboard.png)
+
 
 - **Usage Trends**: 30-second interval cost tracking
 - **Revenue Analysis**: Service type and regional breakdowns
@@ -89,13 +105,13 @@ sudo -i -u postgres
 psql
 
 # Run database configuration
-\i /home/othman/Desktop/spark/Database/config.sql
+\i /Database/config.sql
 ```
 
 ### **2. Generate Test Customers**
 
 ```bash
-cd /home/othman/Desktop/spark/1_Data-Generation_Phase
+cd /1_Data-Generation_Phase
 python3 customer_generator.py
 ```
 
@@ -103,7 +119,7 @@ python3 customer_generator.py
 
 ```bash
 # Create .env file in project root
-cd /home/othman/Desktop/spark
+cd /
 cp .env.example .env
 
 # Edit with your credentials
@@ -225,14 +241,6 @@ sms,2140.85,300,7.14
 data,21789.56,300,72.63
 ```
 
-**⏰ Rated Records (Dashboard Ready)**
-
-```csv
-record_id,record_type,timestamp,msisdn,cost,rating_status
-abc-123,voice,04:07:48,+212600000001,15.75,rated
-def-456,data,04:08:15,+212600000002,25.50,rated
-```
-
 ## ⚙️ Configuration
 
 ### **Database Configuration**
@@ -267,54 +275,6 @@ AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_DEFAULT_REGION=eu-west-3
 ```
 
-## 🔧 Advanced Features
-
-### **Dynamic Discounts**
-
-- **Student Discount**: 15% off for students
-- **Loyalty Discount**: 2% per year (max 10%)
-- **Urban Discount**: 5% off for urban customers
-- **Ramadan Discount**: 10% during Ramadan month
-- **Usage Thresholds**: Volume-based discounts
-
-### **Time-based Pricing**
-
-- **Morning Discount**: 2% off (8 AM - 12 PM) for voice
-- **Evening Surcharge**: 2% extra (6 PM - 11 PM) for voice
-- **Friday Discount**: 3% off on Fridays for voice
-
-### **International Handling**
-
-- **Premium Plan Required**: International calls/SMS
-- **Roaming Surcharge**: 50% extra for all services
-- **Automatic Rejection**: Non-premium plans blocked
-
-## 📈 Dashboard Integration
-
-### **Time-formatted Data**
-
-Perfect for real-time dashboards:
-
-```sql
--- 30-second interval analysis
-SELECT
-  SUBSTRING(timestamp, 1, 7) as time_interval,
-  SUM(cost) as total_cost,
-  COUNT(*) as record_count
-FROM rated_records
-GROUP BY time_interval
-ORDER BY time_interval;
-```
-
-### **Revenue Trends**
-
-```sql
--- Service comparison
-SELECT service_type, total_revenue
-FROM revenue_by_service
-ORDER BY total_revenue DESC;
-```
-
 ## 🚨 Error Handling
 
 ### **Dead Records Tracking**
@@ -323,19 +283,6 @@ ORDER BY total_revenue DESC;
 - **Validation Errors**: Missing fields, negative values
 - **Error Sources**: Rating engine vs. mediation engine
 
-### **Monitoring**
-
-```bash
-# Check error rates
-SELECT rating_status, COUNT(*)
-FROM rated_records
-GROUP BY rating_status;
-
-# Monitor dead records
-SELECT error_type, COUNT(*)
-FROM dead_records
-GROUP BY error_type;
-```
 
 ## 🔒 Security
 
@@ -351,64 +298,6 @@ GROUP BY error_type;
 - **Rate Plan Validation**: Service eligibility checks
 - **Customer Status**: Active customer verification
 
-## 📞 Support & Troubleshooting
-
-### **Common Issues**
-
-**Kafka Connection Errors**
-
-```bash
-# Check if Kafka is running
-jps | grep Kafka
-
-# Verify topic exists
-kafka-topics.sh --list --bootstrap-server localhost:9092
-```
-
-**Database Connection Issues**
-
-```bash
-# Test PostgreSQL connection
-psql -U othman -d telecom_db -h localhost -c "SELECT 1;"
-```
-
-**S3 Upload Failures**
-
-```bash
-# Verify AWS credentials
-aws s3 ls s3://your-bucket-name/
-```
-
-### **Performance Tuning**
-
-```yaml
-# Spark Configuration
-spark:
-  sql.adaptive.enabled: true
-  sql.adaptive.coalescePartitions.enabled: true
-  serializer: org.apache.spark.serializer.KryoSerializer
-```
-
-## 🤝 Contributing
-
-1. **Fork** the repository
-2. **Create** feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to branch (`git push origin feature/amazing-feature`)
-5. **Open** Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Apache Spark** for distributed processing
-- **Apache Kafka** for real-time streaming
-- **PostgreSQL** for reliable data storage
-- **AWS S3** for cloud storage integration
-
----
 
 ## 📊 Quick Start Example
 
@@ -425,7 +314,3 @@ cd 1_Data-Generation_Phase && python3 producer.py
 # 4. Check results
 ls -la reports/
 ```
-
-**🎉 You now have a complete telecom billing system!**
-
-For detailed configuration and advanced usage, see the individual phase documentation in each directory.
