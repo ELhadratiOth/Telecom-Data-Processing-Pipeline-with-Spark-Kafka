@@ -132,7 +132,7 @@ def main():
     billing_df = billing_df.join(
         voice_rate_plans,
         billing_df.rate_plan_id == voice_rate_plans.voice_rate_plan_id,
-        "left"
+        "left_outer"
     )
     
     billing_df = billing_df.withColumn(
@@ -160,7 +160,7 @@ def main():
     billing_df = billing_df.join(
         sms_rate_plans,
         billing_df.rate_plan_id == sms_rate_plans.sms_rate_plan_id,
-        "left"
+        "left_outer"
     )
     
     billing_df = billing_df.withColumn(
@@ -181,7 +181,7 @@ def main():
     billing_df = billing_df.join(
         data_rate_plans,
         billing_df.rate_plan_id == data_rate_plans.data_rate_plan_id,
-        "left"
+        "left_outer"
     )
     
     billing_df = billing_df.withColumn(
@@ -239,7 +239,7 @@ def main():
     billing_df = billing_df.withColumn(
         "student_discount",
         when(
-            (col("student") == "true") | (col("student") == True),
+           (col("student") == True),
             (col("voice_cost") + col("sms_cost") + col("data_cost")) * student_discount_rate
         ).otherwise(0.0)
     )
@@ -293,7 +293,7 @@ def main():
     billing_df = billing_df.withColumn(
         "regulatory_fee",
         when(
-            (col("student") == "true") | (col("student") == True),
+            (col("student") == True),
             0.0
         ).otherwise(lit(regulatory_fee))
     )
