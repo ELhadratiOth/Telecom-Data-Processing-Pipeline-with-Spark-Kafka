@@ -27,7 +27,7 @@ input_schema = StructType([
 output_schema = StructType([
     StructField("record_id", StringType(), False),
     StructField("record_type", StringType(), True),
-    StructField("timestamp", TimestampType(), True),  # Changed from StringType to TimestampType
+    StructField("timestamp", TimestampType(), True), 
     StructField("msisdn", StringType(), True),
     StructField("secondary_msisdn", StringType(), True),
     StructField("duration_sec", FloatType(), True),
@@ -92,13 +92,6 @@ def main():
             "error"
         ).otherwise(col("status"))
     )
-
-    validated_df.writeStream \
-        .format("console") \
-        .option("truncate", False) \
-        .trigger(processingTime="30 seconds") \
-        .start()
-
     valid_df = validated_df.filter(col("status") == "valid")
     error_df = validated_df.filter(col("status") == "error")
 

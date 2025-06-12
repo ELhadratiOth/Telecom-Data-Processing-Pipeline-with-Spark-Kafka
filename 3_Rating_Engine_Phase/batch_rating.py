@@ -29,7 +29,7 @@ customer_schema = StructType([
     StructField("activation_date", StringType(), True),
     StructField("status", StringType(), True),
     StructField("region", StringType(), True),
-    StructField("student", StringType(), True)  # Boolean stored as "true"/"false" string
+    StructField("student", StringType(), True)
 ])
 
 rate_plan_schema = StructType([
@@ -75,18 +75,17 @@ def main():
             .option("driver", config['rating']['output_rated_postgres']['driver']) \
             .load()
         
-        existing_record_ids = existing_rated_df.select("record_id").distinct()
+        existing_record_ids = existing_rated_df.select("record_id")
         
         normalized_df = normalized_df.join(
             existing_record_ids,
             "record_id",
             "left_anti"
         )
-        print(f"New records to process (excluding already rated): {normalized_df.count()}")
-        
+        print(f"New records to process : {normalized_df.count()}")
+
     except Exception as e:
         print(f"Warning: Could not check existing records (table might be empty): {e}")
-        print("Processing all records")
 
     if normalized_df.count() == 0:
         print("No new records to process.")
@@ -183,8 +182,7 @@ def main():
         )
         .when(
             (col("rating_status") == "rated") & (col("record_type") == "data"),
-            when(col("data_volume_mb").isNull() | (col("data_volume_mb") <= 0), 0.0)
-            .otherwise(col("data_volume_mb") * col("unit_price"))
+            0.0
         )
         .when(
             (col("rating_status") == "rated") & (col("record_type") == "sms"),

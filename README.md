@@ -3,7 +3,7 @@
 A comprehensive real-time telecom data processing pipeline built with Apache Spark, Kafka, and PostgreSQL. This system handles telecom usage records (voice, SMS, data) from generation through billing and reporting.
 
 ## Architecture Overview
-![Architecture](Imgs/architecture.png)
+![Architecture](Docs/architecture.png)
 
 The pipeline consists of six main phases:
 1. **Data Generation**: Simulates telecom usage records and streams them to Kafka.
@@ -54,7 +54,7 @@ The pipeline consists of six main phases:
 
 The system provides real-time analytics dashboard with:
 
-![Dashboard](Imgs/dashboard.png)
+![Dashboard](Docs/dashboard.png)
 
 
 - **Usage Trends**: 30-second interval cost tracking

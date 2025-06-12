@@ -1,7 +1,7 @@
 import yaml
 from datetime import datetime, timedelta
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, when, sum, count, round, lit, to_timestamp, current_timestamp, max as spark_max, min as spark_min, date_format, datediff, expr
+from pyspark.sql.functions import col, when, sum, count, round, lit, to_timestamp, current_timestamp, date_format, datediff, expr
 from pyspark.sql.types import StructType, StructField, StringType, FloatType, TimestampType, IntegerType
 
 def load_config(yaml_file="config.yaml"):
@@ -61,7 +61,6 @@ def main():
         .option("driver", config['billing']['input_postgres']['driver']) \
         .load()
 
-    print(f"Total rated_records in database: {rated_df.count()}")
 
     customers_df = spark.read \
         .format("jdbc") \
@@ -116,7 +115,7 @@ def main():
     billing_df = aggregated_df.join(
         customers_df.select("msisdn", "customer_name", "rate_plan_id", "student", "region", "activation_date"),
         "msisdn",
-        "inner"
+        "left_outer"
     )
 
     billing_df = billing_df.withColumn(
