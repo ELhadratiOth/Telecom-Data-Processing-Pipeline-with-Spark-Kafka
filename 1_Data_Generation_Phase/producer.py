@@ -331,7 +331,7 @@ def main():
     load_customer_phone_numbers(config)
     
     current_time = datetime.now()
-    records = generate_batch(config['data_generation']['records_per_hour'], current_time, config)
+    records = generate_batch(config['data_generation']['records_per_hour'], config)
     
     if config['output']['format'] in ["csv", "jsonl"]:
         save_to_file(records, config)

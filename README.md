@@ -1,76 +1,67 @@
-# 📡 Telecom Data Processing Pipeline
+# Telecom Data Processing Pipeline
 
-A comprehensive real-time telecom data processing pipeline built with Apache Spark, Kafka, and PostgreSQL. This system handles telecom usage records (voice, SMS, data) from generation through billing and reporting.
+A comprehensive telecom data processing pipline (Kappa Architecture) built with Apache Spark, Kafka, and PostgreSQL. This enterprise-grade solution handles telecom usage records (voice, SMS, data) through the complete billing lifecycle from data generation to final reporting.
 
 ## Architecture Overview
+
+This system implements a modern microservices-based architecture for telecom billing with the following components:
+
 ![Architecture](Docs/architecture.png)
 
-The pipeline consists of six main phases:
-1. **Data Generation**: Simulates telecom usage records and streams them to Kafka.
-2. **Data Mediation**: Consumes records, validates, and normalizes them.
-3. **Rating Engine**: Applies multi-tier pricing and calculates costs based on usage.
-4. **Billing Engine**: Generates customer invoices based on rated records.
-5. **Invoice Export**: Creates PDF invoices and sends them via email.
-6. **Reporting**: Generates comprehensive reports and uploads them to S3.
-7. **Dashboard Analytics**: Provides real-time insights into usage and revenue.
+
+- **Data Generation Layer**: Simulates real-world telecom usage patterns
+- **Mediation Layer**: Real-time data validation and normalization
+- **Rating Engine**: Dynamic pricing and cost calculation
+- **Billing Engine**: Invoice generation with complex discount logic
+- **Export Layer**: PDF invoice generation and email delivery
+- **Reporting Layer**: Analytics and business intelligence reports
 
 
-## 🚀 Features
+## Key Features
 
-### ✅ **Real-time Data Processing**
+### Real-time Data Processing
 
-- **Kafka Integration**: Streaming data pipeline
-- **Spark Streaming**: Real-time record processing
-- **Error Handling**: Automatic dead letter queue management
+- **Kafka Integration**: High-throughput streaming data pipeline
+- **Spark Streaming**: Distributed real-time record processing
+- **Error Handling**: Comprehensive dead letter queue management
+- **Scalability**: Horizontal scaling for high-volume processing
 
-### ✅ **Advanced Rating Engine**
+### Advanced Rating Engine
 
-- **Multi-tier Pricing**: Voice, SMS, and data plans
-- **Time-based Pricing**: Evening/morning modifiers
-- **Roaming Charges**: International call handling
-- **Premium Plan Validation**: Service eligibility checks
+- **Multi-tier Pricing**: Flexible voice, SMS, and data plan structures
+- **Time-based Pricing**: Dynamic pricing with time-of-day modifiers
+- **Roaming Charges**: International call and roaming surcharge handling
+- **Plan Validation**: Automatic service eligibility verification
 
-### ✅ **Intelligent Billing**
+### Intelligent Billing System
 
-- **Cumulative Billing**: Free unit allowances
-- **Dynamic Discounts**: Student, loyalty, urban, Ramadan
-- **Usage Thresholds**: Volume-based discounts
-- **Tax Calculation**: VAT and regulatory fees
+- **Cumulative Billing**: Free unit allowances with rollover logic
+- **Dynamic Discounts**: Student, loyalty, geographic, and seasonal discounts
+- **Usage Thresholds**: Volume-based discount tiers
+- **Tax Calculation**: Automated VAT and regulatory fee computation
 
-### ✅ **Comprehensive Reporting**
+### Comprehensive Analytics
 
-- **CSV Generation**: Local and S3 cloud storage
-- **Dashboard Ready**: Time-formatted data for analytics
-- **Revenue Analysis**: By region and service type
-- **Error Tracking**: Dead records monitoring
+- **Real-time Reporting**: CSV and cloud storage integration
+- **Dashboard Integration**: Time-formatted data for business intelligence
+- **Revenue Analysis**: Multi-dimensional revenue breakdowns
+- **Error Monitoring**: Comprehensive dead records tracking
 
-### ✅ **Invoice Management**
+### Invoice Management
 
-- **PDF Generation**: Professional invoice templates
-- **Email Delivery**: SMTP integration
-- **Customer Analytics**: Usage patterns and billing breakdown
+- **Professional PDFs**: Template-based invoice generation
+- **Email Integration**: Automated SMTP delivery system
+- **Customer Analytics**: Detailed usage pattern analysis
 
-## 📊 Dashboard Analytics
+## System Requirements
 
-The system provides real-time analytics dashboard with:
-
-![Dashboard](Docs/dashboard.png)
-
-
-- **Usage Trends**: 30-second interval cost tracking
-- **Revenue Analysis**: Service type and regional breakdowns
-- **Customer Insights**: Activity patterns and billing summaries
-- **Error Monitoring**: Dead records and system health metrics
-
-## 📋 Prerequisites
-
-### **System Requirements**
+### Infrastructure Prerequisites
 
 ```bash
-# Java 8 or 11
+# Java Development Kit 17
 java -version
 
-# Python 3.8+
+# Python 3.10 or higher
 python3 --version
 
 # Apache Spark 3.5+
@@ -81,129 +72,184 @@ psql --version
 
 # Apache Kafka 2.8+
 kafka-topics.sh --version
+
+# Docker and Docker-Compose (for monitoring)
+docker --version
 ```
 
-### **Python Dependencies**
+### Python Dependencies
 
 ```bash
-pip install pyspark==3.5.5
-pip install kafka-python==2.0.2
-pip install psycopg2-binary==2.9.9
-pip install PyYAML==6.0.1
-pip install python-dotenv==1.0.0
-pip install jinja2==3.1.2
-pip install weasyprint==60.0
+# Install required packages
+pip install -r requirements.txt
+
 ```
 
-## 🛠️ Installation & Setup
+## Real-time Monitoring with Kafdrop
 
-### **1. Database Setup**
+### Kafka Topics Monitoring
+
+Monitor your Kafka topics in real-time using the Kafdrop web interface:
+
+![Kafdrop Monitoring Interface](Docs/monitoring.png)
+
+### Quick Start Monitoring
+
+```bash
+# Navigate to monitoring directory
+cd monitoring
+
+# Start Kafdrop container
+docker-compose up -d
+
+# Access web interface
+open http://localhost:9000
+```
+
+### Monitored Topics
+
+- **telecom_usage_records**: Raw incoming data from producers
+- **normalized_records**: Validated records after mediation
+- **rated_records**: Priced records ready for billing
+
+
+### Stop Monitoring
+
+```bash
+# Stop Kafdrop
+docker-compose down
+
+# Clean up resources
+docker system prune -f
+```
+
+## Installation and Setup
+
+### 1. Environment Setup
+
+```bash
+# Activate Spark environment
+cd /home/othman/Desktop/spark
+bash Install/setup_environment.sh
+```
+
+### 2. Database Configuration
 
 ```bash
 # Connect as PostgreSQL admin
 sudo -i -u postgres
 psql
 
-# Run database configuration
-\i /Database/config.sql
+# Run database initialization
+\i /home/othman/Desktop/spark/Database/config.sql
 ```
 
-### **2. Generate Test Customers**
+### 3. Generate Test Data
 
 ```bash
-cd /1_Data-Generation_Phase
+cd 1_Data_Generation_Phase
 python3 customer_generator.py
 ```
 
-### **3. Environment Configuration**
+### 4. Environment Variables
 
 ```bash
-# Create .env file in project root
-cd /
-cp .env.example .env
+# Create environment file from template
+cp .env.sample .env
 
-# Edit with your credentials
+# Edit the .env file with your actual values
 nano .env
 ```
 
-### **4. Kafka Setup**
+**Required Configuration:**
+
+- **AWS Credentials**: For S3 storage and uploads
+- **Email Settings**: For invoice delivery notifications
+- **Database**: PostgreSQL connection details
+- **Kafka**: Broker configuration for streaming
+- **Spark**: Memory and driver settings
+
+**Example .env configuration:**
 
 ```bash
-# Start Zookeeper
-bin/zookeeper-server-start.sh config/zookeeper.properties
+# AWS Configuration
+AWS_ACCESS_KEY_ID=your-aws-access-key
+AWS_SECRET_ACCESS_KEY=your-aws-secret-key
+AWS_DEFAULT_REGION=eu-west-3
 
-# Start Kafka
-bin/kafka-server-start.sh config/server.properties
+# Email Configuration
+SENDER_EMAIL=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
 
-# Create topic
-bin/kafka-topics.sh --create --topic telecom_usage_records \
-    --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
 ```
 
-## 🎮 Usage Guide
 
-### **Phase 1: Data Generation**
+## Pipeline Execution Guide
+
+### Phase 1: Data Generation
 
 ```bash
-cd 1_Data-Generation_Phase
+cd 1_Data_Generation_Phase
 python3 producer.py
 ```
 
-**Output**: Real-time telecom records streamed to Kafka
+**Output**: Real-time telecom records streamed to Kafka topics
 
-### **Phase 2: Data Mediation**
+### Phase 2: Data Mediation
 
 ```bash
 cd 2_Mediation_Phase
 python3 consumer_mediation.py
 ```
 
-**Output**: Validated records in `normalized_records` table
+**Output**: Validated and normalized records stored in database
 
-### **Phase 3: Rating Engine**
+### Phase 3: Rating Engine
 
 ```bash
-cd 3_Rating-Engine_Phase
+cd 3_Rating_Engine_Phase
 
-# Store normalized records
+# Store normalized records from Kafka
 python3 consumer_rating.py
 
-# Rate the records
+# Apply pricing rules and calculate costs
 python3 batch_rating.py
 ```
 
-**Output**: Priced records in `rated_records` table
+**Output**: Priced records with cost calculations in `rated_records` table
 
-### **Phase 4: Billing Engine**
+### Phase 4: Billing Engine
 
 ```bash
 cd 4_Billing_Engine_Phase
 python3 batch_billing.py
 ```
 
-**Output**: Customer invoices in `invoices` table
+**Output**: Customer invoices with discounts and taxes in `invoices` table
 
-### **Phase 5: Invoice Export**
+### Phase 5: Invoice Export
 
 ```bash
 cd 5_Invoice_Export_Phase
 python3 invoice_generator.py
 ```
 
-**Output**: PDF invoices + email delivery
+**Output**: Professional PDF invoices with automated email delivery
 
-### **Phase 6: Reporting**
+### Phase 6: Reporting and Analytics
 
 ```bash
 cd 6_Reporting_Phase
 python3 batch_reporting.py
 ```
 
-**Output**: CSV reports + S3 upload
+**Output**: Business intelligence reports exported to CSV , S3 to do analytics and dashboard integration using Amazon QuickSight
 
-## 📊 Generated Reports
 
-### **Local Folder Structure**
+## Generated Reports and Analytics
+
+### Local Report Structure
 
 ```
 reports/
@@ -222,9 +268,9 @@ reports/
     └── dead_records.csv
 ```
 
-### **Report Contents**
+### Sample Report Contents
 
-**📍 Revenue by Region**
+**Revenue by Region**
 
 ```csv
 region,total_revenue,customer_count,avg_revenue_per_customer
@@ -232,7 +278,7 @@ urban,36398.22,180,202.21
 rural,15982.91,120,133.19
 ```
 
-**📱 Revenue by Service**
+**Revenue by Service Type**
 
 ```csv
 service_type,total_revenue,total_invoices,avg_revenue_per_customer
@@ -241,9 +287,17 @@ sms,2140.85,300,7.14
 data,21789.56,300,72.63
 ```
 
-## ⚙️ Configuration
+**Rated Records (Dashboard Ready)**
 
-### **Database Configuration**
+```csv
+record_id,record_type,timestamp,msisdn,cost,rating_status
+abc-123,voice,04:07:48,+212600000001,15.75,rated
+def-456,data,04:08:15,+212600000002,25.50,rated
+```
+
+## Configuration Management
+
+### Database Configuration
 
 ```yaml
 # config.yaml
@@ -254,7 +308,7 @@ database:
   password: 'othman'
 ```
 
-### **Rate Plans**
+### Rate Plan Configuration
 
 ```sql
 -- Voice Plans
@@ -266,35 +320,39 @@ database:
 (6, 'Premium Plan', 'data', 0.04, 0, 20.0, 0.08)    -- Better tiered rates
 ```
 
-### **S3 Configuration**
+## Advanced Features
 
-```properties
-# .env
-AWS_ACCESS_KEY_ID=your_access_key
-AWS_SECRET_ACCESS_KEY=your_secret_key
-AWS_DEFAULT_REGION=eu-west-3
-```
+### Dynamic Discount System
 
-## 🚨 Error Handling
+- **Student Discount**: 15% reduction for verified students
+- **Loyalty Program**: 2% per year of service (maximum 10%)
+- **Geographic Pricing**: 5% discount for urban area customers
+- **Seasonal Promotions**: 10% discount during Ramadan month
+- **Volume Incentives**: Usage threshold-based discount tiers
 
-### **Dead Records Tracking**
+### Time-based Pricing Engine
+
+- **Morning Rates**: 2% discount during 8 AM - 12 PM for voice services
+- **Evening Surcharge**: 2% premium during 6 PM - 11 PM for voice services
+- **Weekend Pricing**: 3% Friday discount for voice communications
+
+### International Service Management
+
+- **Premium Plan Requirements**: International calls and SMS restricted to premium plans
+- **Roaming Charges**: 50% surcharge for all roaming services
+- **Service Blocking**: Automatic rejection for non-eligible plans
+
+## Dashboard Integration (Amazon QuickSight)
+
+![Dashboard](Docs/dashboard.png)
+  
+
+## Error Handling and Monitoring
+
+### Dead Records Tracking
 
 - **Rating Errors**: Unmatched customers, invalid plans
 - **Validation Errors**: Missing fields, negative values
 - **Error Sources**: Rating engine vs. mediation engine
 
-
-## 🔒 Security
-
-### **Environment Variables**
-
-- **Database Credentials**: Stored in `.env`
-- **SMTP Settings**: Email credentials protected
-- **AWS Keys**: S3 access keys secured
-
-### **Data Validation**
-
-- **Phone Number Validation**: Moroccan format (+212)
-- **Rate Plan Validation**: Service eligibility checks
-- **Customer Status**: Active customer verification
 

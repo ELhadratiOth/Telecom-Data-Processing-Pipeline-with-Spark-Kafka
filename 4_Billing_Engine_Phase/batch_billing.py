@@ -1,7 +1,7 @@
 import yaml
 from datetime import datetime, timedelta
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, when, sum, count, round, lit, to_timestamp, current_timestamp, date_format, datediff, expr
+from pyspark.sql.functions import col, when, sum, count, round, lit, to_timestamp, current_timestamp, max as spark_max, min as spark_min, date_format, datediff, expr
 from pyspark.sql.types import StructType, StructField, StringType, FloatType, TimestampType, IntegerType
 
 def load_config(yaml_file="config.yaml"):
@@ -61,6 +61,7 @@ def main():
         .option("driver", config['billing']['input_postgres']['driver']) \
         .load()
 
+    print(f"Total rated_records in database: {rated_df.count()}")
 
     customers_df = spark.read \
         .format("jdbc") \
@@ -115,7 +116,7 @@ def main():
     billing_df = aggregated_df.join(
         customers_df.select("msisdn", "customer_name", "rate_plan_id", "student", "region", "activation_date"),
         "msisdn",
-        "left_outer"
+        "inner"
     )
 
     billing_df = billing_df.withColumn(
@@ -132,7 +133,7 @@ def main():
     billing_df = billing_df.join(
         voice_rate_plans,
         billing_df.rate_plan_id == voice_rate_plans.voice_rate_plan_id,
-        "left_outer"
+        "left"
     )
     
     billing_df = billing_df.withColumn(
@@ -160,7 +161,7 @@ def main():
     billing_df = billing_df.join(
         sms_rate_plans,
         billing_df.rate_plan_id == sms_rate_plans.sms_rate_plan_id,
-        "left_outer"
+        "left"
     )
     
     billing_df = billing_df.withColumn(
@@ -181,7 +182,7 @@ def main():
     billing_df = billing_df.join(
         data_rate_plans,
         billing_df.rate_plan_id == data_rate_plans.data_rate_plan_id,
-        "left_outer"
+        "left"
     )
     
     billing_df = billing_df.withColumn(
@@ -239,7 +240,7 @@ def main():
     billing_df = billing_df.withColumn(
         "student_discount",
         when(
-           (col("student") == True),
+            (col("student") == "true") | (col("student") == True),
             (col("voice_cost") + col("sms_cost") + col("data_cost")) * student_discount_rate
         ).otherwise(0.0)
     )
@@ -293,7 +294,7 @@ def main():
     billing_df = billing_df.withColumn(
         "regulatory_fee",
         when(
-            (col("student") == True),
+            (col("student") == "true") | (col("student") == True),
             0.0
         ).otherwise(lit(regulatory_fee))
     )

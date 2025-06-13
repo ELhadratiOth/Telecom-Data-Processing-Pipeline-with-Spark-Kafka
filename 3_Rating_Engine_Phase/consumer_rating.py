@@ -70,13 +70,18 @@ def main():
             
         except Exception as e:
             print(f"Error writing batch {batch_id}: {e}")
-            
+            if "duplicate key" in str(e).lower():
+                print(f"Batch {batch_id} contains duplicates - skipping duplicate records")
+            else:
+                print(f"Unexpected error in batch {batch_id}: {e}")
 
     query = json_df.writeStream \
         .foreachBatch(write_to_postgres) \
         .option("checkpointLocation", "output/checkpoints/normalized_store") \
         .trigger(processingTime="10 seconds") \
         .start()
+    
+    print(f"Started normalized records storage: {query.name}")
     query.awaitTermination()
 
 if __name__ == "__main__":

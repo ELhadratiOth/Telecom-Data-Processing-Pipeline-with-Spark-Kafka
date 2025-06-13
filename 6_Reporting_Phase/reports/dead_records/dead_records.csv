@@ -1,109 +1,109 @@
-record_id,record_type,timestamp,msisdn,error_type,error_source
-0387bd7e-65a3-42a3-b1fb-7e498e86c709,voice,03:55:11,+212364999638,rejected,rating_engine
-05048e28-5f7a-4436-87dc-cfa57ce5b538,voice,03:55:51,+212975411150,rejected,rating_engine
-0628fc50-a9b3-4e34-a9a2-5e6276931a7e,voice,03:55:35,+212358362957,rejected,rating_engine
-07841d31-1214-4ff8-b606-2f820d8a482a,voice,03:55:22,+212782797286,rejected,rating_engine
-0b2761b5-6fa7-40ba-bc56-bf426520196c,voice,03:55:26,+212684415189,rejected,rating_engine
-13a540b7-71a6-4a89-bd45-50029ffa2082,voice,03:55:13,+212958464568,rejected,rating_engine
-18f40043-9ad4-4029-ac0e-2e327730522a,voice,03:55:57,+212875946287,unmatched,rating_engine
-1ed2ffa9-5965-4acb-9fda-f64f51f1c6e4,voice,03:55:11,+999948906637,unmatched,rating_engine
-202da729-0dbe-4033-9dfe-c8ada31c53f0,data,03:55:25,+212526224773,unmatched,rating_engine
-21179e2f-9cb0-4f00-b209-902b37273ea0,voice,03:55:12,+212750054410,unmatched,rating_engine
-249a2065-c510-4e74-afb7-79cde26844a8,voice,03:55:14,+212315199066,rejected,rating_engine
-2a20710b-3f70-402b-99c7-ae5aeb69e706,voice,03:56:08,+212814078215,unmatched,rating_engine
-2c8454dc-84f5-497b-9518-31573401186f,voice,03:56:07,+212847757763,rejected,rating_engine
-3086b410-0086-4aed-a4eb-2cb1edb4d783,voice,03:56:05,+212919407839,unmatched,rating_engine
-32eacc66-cafd-4265-bf7e-d0b903638527,voice,03:55:43,+212664428114,rejected,rating_engine
-32f09001-11cf-432e-b265-6a32a6a9f185,voice,03:55:53,+212564154882,rejected,rating_engine
-330538ff-3a43-4f80-aafe-4c92b61cb20c,voice,03:56:08,+212900132600,unmatched,rating_engine
-34276067-d0ef-4a53-b8ef-f96a7e22dcc1,voice,03:55:42,+212203894084,unmatched,rating_engine
-34d178e2-a882-4a55-9025-6364a59f727e,data,03:55:36,+212245982946,unmatched,rating_engine
-368c9fc4-d21e-4ba5-b251-7a2b35f2832e,voice,03:55:25,+212002047934,rejected,rating_engine
-37f3592a-98ea-47c9-8632-b2e7092ccbd3,voice,03:55:49,+212096221263,unmatched,rating_engine
-388b9065-8071-40c4-828d-f1254396992b,voice,03:55:42,+212586524327,rejected,rating_engine
-3a4475d0-cbd7-4ccf-b599-18a5c6eb21fb,voice,03:56:03,+212862278181,unmatched,rating_engine
-3ff09840-5fe3-4f4d-9f62-c86f534868ef,sms,03:55:42,+212970585110,unmatched,rating_engine
-41b2fb1d-f47e-4b92-88de-09f6da5cc23c,voice,03:55:26,+212772535999,unmatched,rating_engine
-45c7e3df-e435-4a31-a1e7-45883880167e,voice,03:55:55,+212581403540,rejected,rating_engine
-47b34ac5-a512-477a-82c0-aca3d4504520,voice,03:55:37,+212765705445,rejected,rating_engine
-4918e77a-4055-4ebb-9e32-097f2153e013,voice,03:55:17,+212664428114,rejected,rating_engine
-4bb737e4-2bf7-45d9-9e43-a337e5ff6e9d,sms,03:55:38,+212567223996,rejected,rating_engine
-4d46830d-dc04-426a-989f-0ddbfb5d8283,voice,03:55:19,+212374957281,rejected,rating_engine
-514dbf57-d9e3-4c6a-a377-f6b5da56561e,sms,03:55:12,+212633763382,rejected,rating_engine
-598b7c98-207e-4aa4-9f4b-24f3c57522d2,voice,03:55:56,+212899074611,rejected,rating_engine
-5b33ab60-df03-4a87-883c-983c21a5f232,voice,03:55:49,+212682554107,rejected,rating_engine
-5bcd3d19-61be-465c-af34-9130fa0a0012,voice,03:55:43,+212364970104,unmatched,rating_engine
-5cf7c588-81ea-4b52-8f62-6f02229d08bb,voice,03:55:52,+212939319428,rejected,rating_engine
-5e3af5aa-8738-4723-906c-654b0834f5bf,voice,03:55:31,+212847757763,rejected,rating_engine
-5e780b3a-5429-4594-8d32-1eee130c1d6a,voice,03:56:05,+212501827628,rejected,rating_engine
-5f75a8f2-6eb7-444e-a59b-9a6227eebff7,voice,03:55:16,+212840212424,rejected,rating_engine
-614e7571-e8a1-448c-afae-56fe817bbe93,voice,03:55:42,+212325528386,rejected,rating_engine
-6245542c-d2b8-4d83-875f-6893f929f8ef,voice,03:55:53,+212096737359,rejected,rating_engine
-6252ebdb-b5e6-4b4d-93ab-ba8ec74464b3,voice,03:55:52,+212479797852,rejected,rating_engine
-63367ab6-bf9a-4ade-aae1-534fe998215f,sms,03:55:45,+212581192773,rejected,rating_engine
-64fe34e3-3df0-4f6f-9a41-87012f45cf52,voice,03:56:08,+212615933277,rejected,rating_engine
-6675e3fd-2d77-4fe0-a4bc-5bf537aa1190,voice,03:55:42,+212058916135,unmatched,rating_engine
-66f64478-6781-4787-9c42-0a52c2d2b154,voice,03:55:53,+212380507717,rejected,rating_engine
-69ee0e0f-eeec-476f-a392-774c7b9ce1a4,sms,03:56:03,+212577727612,rejected,rating_engine
-6f8949cc-ecc6-4a16-8c79-6462949ceae2,voice,03:56:04,+212907820288,rejected,rating_engine
-71529bf1-79c6-4176-9af1-bfca210df10e,voice,03:55:12,+212310094196,rejected,rating_engine
-79c8f316-a579-405f-abf7-538fa9115fe3,voice,03:55:37,+212511811158,rejected,rating_engine
-7d319833-167b-4549-be80-954b0f74ecd3,voice,03:55:17,+212062646398,rejected,rating_engine
-7df1bbf5-cf99-4ce9-a1ea-bf29e6767789,data,03:56:09,+212640037188,unmatched,rating_engine
-7e52045a-a6cc-4033-9af9-cabd92b7ed69,voice,03:56:02,+212526024917,rejected,rating_engine
-7fddf0a0-5c94-4c25-8522-e14ae3968210,voice,03:55:21,+212717698380,rejected,rating_engine
-7fe677f2-54d0-4863-bac1-995c8984df5e,voice,03:55:25,+212270494393,rejected,rating_engine
-8205f1b7-6cad-464c-b390-5daa33f15ef4,voice,03:55:27,+212499885019,unmatched,rating_engine
-86942df3-6fdc-48f7-9862-2623c714b10a,voice,03:55:50,+212092273727,rejected,rating_engine
-8901a931-196a-406c-80f7-3d26b23f44ff,voice,03:55:17,+212339862080,rejected,rating_engine
-8a4d5227-1bee-4699-9e7f-8b24deb27be2,voice,03:55:16,+212937644282,rejected,rating_engine
-8b33f26d-1192-44bc-8307-f44c0f5fe9e9,voice,03:55:41,+212682554107,rejected,rating_engine
-90c435e8-d257-4597-9e5e-9851b299bb3c,voice,03:55:45,+212014517716,unmatched,rating_engine
-927c6403-0e07-4960-be0b-bf13c20606d8,voice,03:55:57,+212586524327,rejected,rating_engine
-92d2d4b9-2604-4149-aae6-d14b8ac27af3,voice,03:55:18,+212084489357,rejected,rating_engine
-935cc699-9285-4e26-aefd-a12b2ca486f3,data,03:56:04,+212322088683,unmatched,rating_engine
-979c9580-0f5e-4eea-879b-d9f3fadaee21,voice,03:55:24,+212304466630,rejected,rating_engine
-9890627c-3fcf-4e66-854c-9eb97a8aad26,voice,03:55:13,+212760623074,unmatched,rating_engine
-99b68431-b2e9-4ce9-a0c7-9fde56baa0af,voice,03:56:06,+212525273634,rejected,rating_engine
-9bf3d447-f6d6-4dc9-a25c-b57d5c950225,voice,03:55:42,+212712030578,rejected,rating_engine
-9cbbd311-e840-4c66-8ba8-f2f5a8bbccd9,voice,03:55:41,+212088825054,rejected,rating_engine
-9f58ef89-1cce-4de8-ba7a-d6b928a6430d,data,03:55:11,+212869813188,unmatched,rating_engine
-9ff6bb1e-d1b2-4a68-b365-e6d305f66fcf,voice,03:55:10,+212581403540,rejected,rating_engine
-a4937dc4-9b01-4f8f-b785-0a87d17162ce,voice,03:55:21,+212409549970,rejected,rating_engine
-a4ab4939-de91-4cb6-9989-649ac8dffc12,voice,03:55:59,+212478033455,rejected,rating_engine
-a8837ae2-8513-41f9-a644-df236a406c84,voice,03:55:15,+212062646398,rejected,rating_engine
-a8a8fd4c-6a1d-4602-b697-15c2d6782f83,voice,03:55:24,+212975411150,rejected,rating_engine
-ab577334-1e78-4239-bc29-7f0d0f691e0b,voice,03:56:05,+212939323065,rejected,rating_engine
-b0a99c9f-f264-4e65-8385-cec4a2161ac4,voice,03:55:36,+212244090661,rejected,rating_engine
-b2c8036d-e344-4293-8a7c-d215de908934,sms,03:55:25,+212669094155,rejected,rating_engine
-b6f505c5-1714-4409-b6de-d31de5705247,sms,03:55:56,+212922824907,rejected,rating_engine
-b71ea5f6-e060-4acd-a90f-e78e4b64005d,voice,03:55:16,+212297980301,rejected,rating_engine
-b9a12ac7-15f1-4199-9a48-96e85b6168ab,voice,03:55:18,+212028194369,rejected,rating_engine
-bf2952bd-535a-4d97-b59d-ced50d6c8efe,voice,03:55:29,+212615933277,rejected,rating_engine
-c082369a-e2e4-4ca5-af63-d6ac3e994ab5,voice,03:55:52,+212240667538,rejected,rating_engine
-ca386344-c70f-45dd-afe7-49c9c64920a3,voice,03:55:33,+212888016652,rejected,rating_engine
-cbf273eb-8c45-40c1-b1c7-37dab9a0438d,sms,03:55:12,+212642793491,rejected,rating_engine
-cecd4f87-2bb2-49a6-a103-83ea14e2dc4f,voice,03:55:23,+212491752887,unmatched,rating_engine
-cfb07e93-c623-4754-961d-1cc6b4b0b448,voice,03:55:15,+212226990651,rejected,rating_engine
-d0e4f005-0e31-40d0-a72d-18c2147634ed,data,03:56:01,+212345416439,unmatched,rating_engine
-d0e6f7dc-f120-42f2-94fe-4795401a4a9b,voice,03:55:57,+212027391859,rejected,rating_engine
-d1f8e310-6214-4ab1-a730-1ff0347ab696,voice,03:56:04,+212826606481,rejected,rating_engine
-d6826ea4-4640-4914-a159-8df2dabc6f1c,voice,03:55:19,+212756892656,rejected,rating_engine
-d73604e4-42c2-4cf6-bf34-d61f73365494,voice,03:56:08,+212304466630,rejected,rating_engine
-dddb85d5-ec0b-4aa9-9a46-30e4ac24033b,voice,03:55:15,+999451991887,unmatched,rating_engine
-df068892-0899-420f-bffa-2daad5f00ae9,voice,03:55:47,+212568214570,rejected,rating_engine
-e136748a-27a5-4468-bf5f-fa0d69492ca1,voice,03:55:44,+212907820288,rejected,rating_engine
-e4cf6b0c-945d-4040-9cbc-fb996e65f798,voice,03:56:01,+212996731632,rejected,rating_engine
-ea1925e4-f303-4b00-877f-c1036666bbb8,voice,03:55:36,+212678038284,rejected,rating_engine
-ea799e37-4c7b-46ec-a4a8-4980439d17af,voice,03:56:09,+212105533624,rejected,rating_engine
-ed2ec2b7-eefb-4b0d-b0be-47cb71de50d0,sms,03:56:03,+212096221768,unmatched,rating_engine
-eef407e2-3787-4521-b69a-d2ac5a47d357,voice,03:55:29,+212328061044,rejected,rating_engine
-ef68befb-b3e9-4167-924f-5a256f86cab8,voice,03:55:28,+212564154882,rejected,rating_engine
-f1259aca-00d8-4d60-87f6-3995e69cfabb,voice,03:55:39,+212042732803,rejected,rating_engine
-f1f28cef-d08e-4431-9009-a62cabf1f879,data,03:55:59,+212860110132,unmatched,rating_engine
-f3062790-f021-49a5-9dcb-c95c6770242b,voice,03:55:42,+212931354794,unmatched,rating_engine
-f4b9def7-3a1f-4c73-8ea0-8c384aab008c,sms,03:55:13,+212190108438,rejected,rating_engine
-f659c12d-f22c-42d5-9bb5-ea3c43743b37,data,03:56:07,+212272051839,unmatched,rating_engine
-f96a815b-ab0d-412a-a865-a9955fb78585,sms,03:55:35,+212768074496,rejected,rating_engine
-fade20b0-f232-4b8f-9e03-c56cf4fd6daa,voice,03:55:27,+212586230004,unmatched,rating_engine
-fd812b60-1d73-4930-b759-6e036067a2c3,voice,03:55:15,+212716226408,rejected,rating_engine
+record_id,error_reason,error_source,error_timestamp,original_data
+ea799e37-4c7b-46ec-a4a8-4980439d17af,rejected,rating_engine,2025-06-10T03:56:09.000Z,"record_type:voice, msisdn:+212105533624, duration:1946, data_volume:"
+7df1bbf5-cf99-4ce9-a1ea-bf29e6767789,unmatched,rating_engine,2025-06-10T03:56:09.000Z,"record_type:data, msisdn:+212640037188, duration:1914, data_volume:6370.5498046875"
+64fe34e3-3df0-4f6f-9a41-87012f45cf52,rejected,rating_engine,2025-06-10T03:56:08.000Z,"record_type:voice, msisdn:+212615933277, duration:406, data_volume:"
+330538ff-3a43-4f80-aafe-4c92b61cb20c,unmatched,rating_engine,2025-06-10T03:56:08.000Z,"record_type:voice, msisdn:+212900132600, duration:1635, data_volume:"
+d73604e4-42c2-4cf6-bf34-d61f73365494,rejected,rating_engine,2025-06-10T03:56:08.000Z,"record_type:voice, msisdn:+212304466630, duration:1095, data_volume:"
+2a20710b-3f70-402b-99c7-ae5aeb69e706,unmatched,rating_engine,2025-06-10T03:56:08.000Z,"record_type:voice, msisdn:+212814078215, duration:413, data_volume:"
+2c8454dc-84f5-497b-9518-31573401186f,rejected,rating_engine,2025-06-10T03:56:07.000Z,"record_type:voice, msisdn:+212847757763, duration:1409, data_volume:"
+f659c12d-f22c-42d5-9bb5-ea3c43743b37,unmatched,rating_engine,2025-06-10T03:56:07.000Z,"record_type:data, msisdn:+212272051839, duration:1967, data_volume:2145.199951171875"
+99b68431-b2e9-4ce9-a0c7-9fde56baa0af,rejected,rating_engine,2025-06-10T03:56:06.000Z,"record_type:voice, msisdn:+212525273634, duration:235, data_volume:"
+ab577334-1e78-4239-bc29-7f0d0f691e0b,rejected,rating_engine,2025-06-10T03:56:05.000Z,"record_type:voice, msisdn:+212939323065, duration:407, data_volume:"
+5e780b3a-5429-4594-8d32-1eee130c1d6a,rejected,rating_engine,2025-06-10T03:56:05.000Z,"record_type:voice, msisdn:+212501827628, duration:1687, data_volume:"
+3086b410-0086-4aed-a4eb-2cb1edb4d783,unmatched,rating_engine,2025-06-10T03:56:05.000Z,"record_type:voice, msisdn:+212919407839, duration:1649, data_volume:"
+6f8949cc-ecc6-4a16-8c79-6462949ceae2,rejected,rating_engine,2025-06-10T03:56:04.000Z,"record_type:voice, msisdn:+212907820288, duration:1498, data_volume:"
+d1f8e310-6214-4ab1-a730-1ff0347ab696,rejected,rating_engine,2025-06-10T03:56:04.000Z,"record_type:voice, msisdn:+212826606481, duration:436, data_volume:"
+935cc699-9285-4e26-aefd-a12b2ca486f3,unmatched,rating_engine,2025-06-10T03:56:04.000Z,"record_type:data, msisdn:+212322088683, duration:417, data_volume:8545.1904296875"
+3a4475d0-cbd7-4ccf-b599-18a5c6eb21fb,unmatched,rating_engine,2025-06-10T03:56:03.000Z,"record_type:voice, msisdn:+212862278181, duration:1867, data_volume:"
+ed2ec2b7-eefb-4b0d-b0be-47cb71de50d0,unmatched,rating_engine,2025-06-10T03:56:03.000Z,"record_type:sms, msisdn:+212096221768, duration:, data_volume:"
+69ee0e0f-eeec-476f-a392-774c7b9ce1a4,rejected,rating_engine,2025-06-10T03:56:03.000Z,"record_type:sms, msisdn:+212577727612, duration:, data_volume:"
+7e52045a-a6cc-4033-9af9-cabd92b7ed69,rejected,rating_engine,2025-06-10T03:56:02.000Z,"record_type:voice, msisdn:+212526024917, duration:1484, data_volume:"
+e4cf6b0c-945d-4040-9cbc-fb996e65f798,rejected,rating_engine,2025-06-10T03:56:01.000Z,"record_type:voice, msisdn:+212996731632, duration:308, data_volume:"
+d0e4f005-0e31-40d0-a72d-18c2147634ed,unmatched,rating_engine,2025-06-10T03:56:01.000Z,"record_type:data, msisdn:+212345416439, duration:2234, data_volume:2346.6298828125"
+f1f28cef-d08e-4431-9009-a62cabf1f879,unmatched,rating_engine,2025-06-10T03:55:59.000Z,"record_type:data, msisdn:+212860110132, duration:2693, data_volume:8176.97998046875"
+a4ab4939-de91-4cb6-9989-649ac8dffc12,rejected,rating_engine,2025-06-10T03:55:59.000Z,"record_type:voice, msisdn:+212478033455, duration:801, data_volume:"
+18f40043-9ad4-4029-ac0e-2e327730522a,unmatched,rating_engine,2025-06-10T03:55:57.000Z,"record_type:voice, msisdn:+212875946287, duration:1947, data_volume:"
+d0e6f7dc-f120-42f2-94fe-4795401a4a9b,rejected,rating_engine,2025-06-10T03:55:57.000Z,"record_type:voice, msisdn:+212027391859, duration:1157, data_volume:"
+927c6403-0e07-4960-be0b-bf13c20606d8,rejected,rating_engine,2025-06-10T03:55:57.000Z,"record_type:voice, msisdn:+212586524327, duration:1897, data_volume:"
+598b7c98-207e-4aa4-9f4b-24f3c57522d2,rejected,rating_engine,2025-06-10T03:55:56.000Z,"record_type:voice, msisdn:+212899074611, duration:1044, data_volume:"
+b6f505c5-1714-4409-b6de-d31de5705247,rejected,rating_engine,2025-06-10T03:55:56.000Z,"record_type:sms, msisdn:+212922824907, duration:, data_volume:"
+45c7e3df-e435-4a31-a1e7-45883880167e,rejected,rating_engine,2025-06-10T03:55:55.000Z,"record_type:voice, msisdn:+212581403540, duration:1759, data_volume:"
+6245542c-d2b8-4d83-875f-6893f929f8ef,rejected,rating_engine,2025-06-10T03:55:53.000Z,"record_type:voice, msisdn:+212096737359, duration:911, data_volume:"
+32f09001-11cf-432e-b265-6a32a6a9f185,rejected,rating_engine,2025-06-10T03:55:53.000Z,"record_type:voice, msisdn:+212564154882, duration:1595, data_volume:"
+66f64478-6781-4787-9c42-0a52c2d2b154,rejected,rating_engine,2025-06-10T03:55:53.000Z,"record_type:voice, msisdn:+212380507717, duration:1872, data_volume:"
+5cf7c588-81ea-4b52-8f62-6f02229d08bb,rejected,rating_engine,2025-06-10T03:55:52.000Z,"record_type:voice, msisdn:+212939319428, duration:1106, data_volume:"
+c082369a-e2e4-4ca5-af63-d6ac3e994ab5,rejected,rating_engine,2025-06-10T03:55:52.000Z,"record_type:voice, msisdn:+212240667538, duration:454, data_volume:"
+6252ebdb-b5e6-4b4d-93ab-ba8ec74464b3,rejected,rating_engine,2025-06-10T03:55:52.000Z,"record_type:voice, msisdn:+212479797852, duration:539, data_volume:"
+05048e28-5f7a-4436-87dc-cfa57ce5b538,rejected,rating_engine,2025-06-10T03:55:51.000Z,"record_type:voice, msisdn:+212975411150, duration:784, data_volume:"
+86942df3-6fdc-48f7-9862-2623c714b10a,rejected,rating_engine,2025-06-10T03:55:50.000Z,"record_type:voice, msisdn:+212092273727, duration:644, data_volume:"
+5b33ab60-df03-4a87-883c-983c21a5f232,rejected,rating_engine,2025-06-10T03:55:49.000Z,"record_type:voice, msisdn:+212682554107, duration:598, data_volume:"
+37f3592a-98ea-47c9-8632-b2e7092ccbd3,unmatched,rating_engine,2025-06-10T03:55:49.000Z,"record_type:voice, msisdn:+212096221263, duration:950, data_volume:"
+df068892-0899-420f-bffa-2daad5f00ae9,rejected,rating_engine,2025-06-10T03:55:47.000Z,"record_type:voice, msisdn:+212568214570, duration:1727, data_volume:"
+90c435e8-d257-4597-9e5e-9851b299bb3c,unmatched,rating_engine,2025-06-10T03:55:45.000Z,"record_type:voice, msisdn:+212014517716, duration:374, data_volume:"
+63367ab6-bf9a-4ade-aae1-534fe998215f,rejected,rating_engine,2025-06-10T03:55:45.000Z,"record_type:sms, msisdn:+212581192773, duration:, data_volume:"
+e136748a-27a5-4468-bf5f-fa0d69492ca1,rejected,rating_engine,2025-06-10T03:55:44.000Z,"record_type:voice, msisdn:+212907820288, duration:1159, data_volume:"
+32eacc66-cafd-4265-bf7e-d0b903638527,rejected,rating_engine,2025-06-10T03:55:43.000Z,"record_type:voice, msisdn:+212664428114, duration:1861, data_volume:"
+5bcd3d19-61be-465c-af34-9130fa0a0012,unmatched,rating_engine,2025-06-10T03:55:43.000Z,"record_type:voice, msisdn:+212364970104, duration:1038, data_volume:"
+6675e3fd-2d77-4fe0-a4bc-5bf537aa1190,unmatched,rating_engine,2025-06-10T03:55:42.000Z,"record_type:voice, msisdn:+212058916135, duration:1066, data_volume:"
+3ff09840-5fe3-4f4d-9f62-c86f534868ef,unmatched,rating_engine,2025-06-10T03:55:42.000Z,"record_type:sms, msisdn:+212970585110, duration:, data_volume:"
+614e7571-e8a1-448c-afae-56fe817bbe93,rejected,rating_engine,2025-06-10T03:55:42.000Z,"record_type:voice, msisdn:+212325528386, duration:1655, data_volume:"
+f3062790-f021-49a5-9dcb-c95c6770242b,unmatched,rating_engine,2025-06-10T03:55:42.000Z,"record_type:voice, msisdn:+212931354794, duration:519, data_volume:"
+34276067-d0ef-4a53-b8ef-f96a7e22dcc1,unmatched,rating_engine,2025-06-10T03:55:42.000Z,"record_type:voice, msisdn:+212203894084, duration:270, data_volume:"
+9bf3d447-f6d6-4dc9-a25c-b57d5c950225,rejected,rating_engine,2025-06-10T03:55:42.000Z,"record_type:voice, msisdn:+212712030578, duration:598, data_volume:"
+388b9065-8071-40c4-828d-f1254396992b,rejected,rating_engine,2025-06-10T03:55:42.000Z,"record_type:voice, msisdn:+212586524327, duration:552, data_volume:"
+9cbbd311-e840-4c66-8ba8-f2f5a8bbccd9,rejected,rating_engine,2025-06-10T03:55:41.000Z,"record_type:voice, msisdn:+212088825054, duration:1491, data_volume:"
+8b33f26d-1192-44bc-8307-f44c0f5fe9e9,rejected,rating_engine,2025-06-10T03:55:41.000Z,"record_type:voice, msisdn:+212682554107, duration:1326, data_volume:"
+f1259aca-00d8-4d60-87f6-3995e69cfabb,rejected,rating_engine,2025-06-10T03:55:39.000Z,"record_type:voice, msisdn:+212042732803, duration:561, data_volume:"
+4bb737e4-2bf7-45d9-9e43-a337e5ff6e9d,rejected,rating_engine,2025-06-10T03:55:38.000Z,"record_type:sms, msisdn:+212567223996, duration:, data_volume:"
+47b34ac5-a512-477a-82c0-aca3d4504520,rejected,rating_engine,2025-06-10T03:55:37.000Z,"record_type:voice, msisdn:+212765705445, duration:703, data_volume:"
+79c8f316-a579-405f-abf7-538fa9115fe3,rejected,rating_engine,2025-06-10T03:55:37.000Z,"record_type:voice, msisdn:+212511811158, duration:339, data_volume:"
+b0a99c9f-f264-4e65-8385-cec4a2161ac4,rejected,rating_engine,2025-06-10T03:55:36.000Z,"record_type:voice, msisdn:+212244090661, duration:1227, data_volume:"
+ea1925e4-f303-4b00-877f-c1036666bbb8,rejected,rating_engine,2025-06-10T03:55:36.000Z,"record_type:voice, msisdn:+212678038284, duration:873, data_volume:"
+34d178e2-a882-4a55-9025-6364a59f727e,unmatched,rating_engine,2025-06-10T03:55:36.000Z,"record_type:data, msisdn:+212245982946, duration:653, data_volume:449.3900146484375"
+0628fc50-a9b3-4e34-a9a2-5e6276931a7e,rejected,rating_engine,2025-06-10T03:55:35.000Z,"record_type:voice, msisdn:+212358362957, duration:459, data_volume:"
+f96a815b-ab0d-412a-a865-a9955fb78585,rejected,rating_engine,2025-06-10T03:55:35.000Z,"record_type:sms, msisdn:+212768074496, duration:, data_volume:"
+ca386344-c70f-45dd-afe7-49c9c64920a3,rejected,rating_engine,2025-06-10T03:55:33.000Z,"record_type:voice, msisdn:+212888016652, duration:584, data_volume:"
+5e3af5aa-8738-4723-906c-654b0834f5bf,rejected,rating_engine,2025-06-10T03:55:31.000Z,"record_type:voice, msisdn:+212847757763, duration:631, data_volume:"
+bf2952bd-535a-4d97-b59d-ced50d6c8efe,rejected,rating_engine,2025-06-10T03:55:29.000Z,"record_type:voice, msisdn:+212615933277, duration:644, data_volume:"
+eef407e2-3787-4521-b69a-d2ac5a47d357,rejected,rating_engine,2025-06-10T03:55:29.000Z,"record_type:voice, msisdn:+212328061044, duration:590, data_volume:"
+ef68befb-b3e9-4167-924f-5a256f86cab8,rejected,rating_engine,2025-06-10T03:55:28.000Z,"record_type:voice, msisdn:+212564154882, duration:945, data_volume:"
+fade20b0-f232-4b8f-9e03-c56cf4fd6daa,unmatched,rating_engine,2025-06-10T03:55:27.000Z,"record_type:voice, msisdn:+212586230004, duration:407, data_volume:"
+8205f1b7-6cad-464c-b390-5daa33f15ef4,unmatched,rating_engine,2025-06-10T03:55:27.000Z,"record_type:voice, msisdn:+212499885019, duration:, data_volume:"
+0b2761b5-6fa7-40ba-bc56-bf426520196c,rejected,rating_engine,2025-06-10T03:55:26.000Z,"record_type:voice, msisdn:+212684415189, duration:418, data_volume:"
+41b2fb1d-f47e-4b92-88de-09f6da5cc23c,unmatched,rating_engine,2025-06-10T03:55:26.000Z,"record_type:voice, msisdn:+212772535999, duration:1730, data_volume:"
+202da729-0dbe-4033-9dfe-c8ada31c53f0,unmatched,rating_engine,2025-06-10T03:55:25.000Z,"record_type:data, msisdn:+212526224773, duration:1033, data_volume:1841.3199462890625"
+368c9fc4-d21e-4ba5-b251-7a2b35f2832e,rejected,rating_engine,2025-06-10T03:55:25.000Z,"record_type:voice, msisdn:+212002047934, duration:1734, data_volume:"
+b2c8036d-e344-4293-8a7c-d215de908934,rejected,rating_engine,2025-06-10T03:55:25.000Z,"record_type:sms, msisdn:+212669094155, duration:, data_volume:"
+7fe677f2-54d0-4863-bac1-995c8984df5e,rejected,rating_engine,2025-06-10T03:55:25.000Z,"record_type:voice, msisdn:+212270494393, duration:469, data_volume:"
+a8a8fd4c-6a1d-4602-b697-15c2d6782f83,rejected,rating_engine,2025-06-10T03:55:24.000Z,"record_type:voice, msisdn:+212975411150, duration:1488, data_volume:"
+979c9580-0f5e-4eea-879b-d9f3fadaee21,rejected,rating_engine,2025-06-10T03:55:24.000Z,"record_type:voice, msisdn:+212304466630, duration:1049, data_volume:"
+cecd4f87-2bb2-49a6-a103-83ea14e2dc4f,unmatched,rating_engine,2025-06-10T03:55:23.000Z,"record_type:voice, msisdn:+212491752887, duration:1047, data_volume:"
+07841d31-1214-4ff8-b606-2f820d8a482a,rejected,rating_engine,2025-06-10T03:55:22.000Z,"record_type:voice, msisdn:+212782797286, duration:1907, data_volume:"
+7fddf0a0-5c94-4c25-8522-e14ae3968210,rejected,rating_engine,2025-06-10T03:55:21.000Z,"record_type:voice, msisdn:+212717698380, duration:1594, data_volume:"
+a4937dc4-9b01-4f8f-b785-0a87d17162ce,rejected,rating_engine,2025-06-10T03:55:21.000Z,"record_type:voice, msisdn:+212409549970, duration:511, data_volume:"
+4d46830d-dc04-426a-989f-0ddbfb5d8283,rejected,rating_engine,2025-06-10T03:55:19.000Z,"record_type:voice, msisdn:+212374957281, duration:657, data_volume:"
+d6826ea4-4640-4914-a159-8df2dabc6f1c,rejected,rating_engine,2025-06-10T03:55:19.000Z,"record_type:voice, msisdn:+212756892656, duration:1469, data_volume:"
+b9a12ac7-15f1-4199-9a48-96e85b6168ab,rejected,rating_engine,2025-06-10T03:55:18.000Z,"record_type:voice, msisdn:+212028194369, duration:715, data_volume:"
+92d2d4b9-2604-4149-aae6-d14b8ac27af3,rejected,rating_engine,2025-06-10T03:55:18.000Z,"record_type:voice, msisdn:+212084489357, duration:571, data_volume:"
+4918e77a-4055-4ebb-9e32-097f2153e013,rejected,rating_engine,2025-06-10T03:55:17.000Z,"record_type:voice, msisdn:+212664428114, duration:1208, data_volume:"
+8901a931-196a-406c-80f7-3d26b23f44ff,rejected,rating_engine,2025-06-10T03:55:17.000Z,"record_type:voice, msisdn:+212339862080, duration:631, data_volume:"
+7d319833-167b-4549-be80-954b0f74ecd3,rejected,rating_engine,2025-06-10T03:55:17.000Z,"record_type:voice, msisdn:+212062646398, duration:1491, data_volume:"
+5f75a8f2-6eb7-444e-a59b-9a6227eebff7,rejected,rating_engine,2025-06-10T03:55:16.000Z,"record_type:voice, msisdn:+212840212424, duration:453, data_volume:"
+b71ea5f6-e060-4acd-a90f-e78e4b64005d,rejected,rating_engine,2025-06-10T03:55:16.000Z,"record_type:voice, msisdn:+212297980301, duration:1164, data_volume:"
+8a4d5227-1bee-4699-9e7f-8b24deb27be2,rejected,rating_engine,2025-06-10T03:55:16.000Z,"record_type:voice, msisdn:+212937644282, duration:1024, data_volume:"
+cfb07e93-c623-4754-961d-1cc6b4b0b448,rejected,rating_engine,2025-06-10T03:55:15.000Z,"record_type:voice, msisdn:+212226990651, duration:1266, data_volume:"
+a8837ae2-8513-41f9-a644-df236a406c84,rejected,rating_engine,2025-06-10T03:55:15.000Z,"record_type:voice, msisdn:+212062646398, duration:1920, data_volume:"
+dddb85d5-ec0b-4aa9-9a46-30e4ac24033b,unmatched,rating_engine,2025-06-10T03:55:15.000Z,"record_type:voice, msisdn:+999451991887, duration:1133, data_volume:"
+fd812b60-1d73-4930-b759-6e036067a2c3,rejected,rating_engine,2025-06-10T03:55:15.000Z,"record_type:voice, msisdn:+212716226408, duration:566, data_volume:"
+249a2065-c510-4e74-afb7-79cde26844a8,rejected,rating_engine,2025-06-10T03:55:14.000Z,"record_type:voice, msisdn:+212315199066, duration:590, data_volume:"
+9890627c-3fcf-4e66-854c-9eb97a8aad26,unmatched,rating_engine,2025-06-10T03:55:13.000Z,"record_type:voice, msisdn:+212760623074, duration:706, data_volume:"
+13a540b7-71a6-4a89-bd45-50029ffa2082,rejected,rating_engine,2025-06-10T03:55:13.000Z,"record_type:voice, msisdn:+212958464568, duration:661, data_volume:"
+f4b9def7-3a1f-4c73-8ea0-8c384aab008c,rejected,rating_engine,2025-06-10T03:55:13.000Z,"record_type:sms, msisdn:+212190108438, duration:, data_volume:"
+21179e2f-9cb0-4f00-b209-902b37273ea0,unmatched,rating_engine,2025-06-10T03:55:12.000Z,"record_type:voice, msisdn:+212750054410, duration:1458, data_volume:"
+cbf273eb-8c45-40c1-b1c7-37dab9a0438d,rejected,rating_engine,2025-06-10T03:55:12.000Z,"record_type:sms, msisdn:+212642793491, duration:, data_volume:"
+71529bf1-79c6-4176-9af1-bfca210df10e,rejected,rating_engine,2025-06-10T03:55:12.000Z,"record_type:voice, msisdn:+212310094196, duration:1137, data_volume:"
+514dbf57-d9e3-4c6a-a377-f6b5da56561e,rejected,rating_engine,2025-06-10T03:55:12.000Z,"record_type:sms, msisdn:+212633763382, duration:, data_volume:"
+0387bd7e-65a3-42a3-b1fb-7e498e86c709,rejected,rating_engine,2025-06-10T03:55:11.000Z,"record_type:voice, msisdn:+212364999638, duration:796, data_volume:"
+1ed2ffa9-5965-4acb-9fda-f64f51f1c6e4,unmatched,rating_engine,2025-06-10T03:55:11.000Z,"record_type:voice, msisdn:+999948906637, duration:445, data_volume:"
+9f58ef89-1cce-4de8-ba7a-d6b928a6430d,unmatched,rating_engine,2025-06-10T03:55:11.000Z,"record_type:data, msisdn:+212869813188, duration:2052, data_volume:7968.7900390625"
+9ff6bb1e-d1b2-4a68-b365-e6d305f66fcf,rejected,rating_engine,2025-06-10T03:55:10.000Z,"record_type:voice, msisdn:+212581403540, duration:1171, data_volume:"
